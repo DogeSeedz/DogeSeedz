@@ -1,5 +1,4 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2021 The Dogecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,10 +16,6 @@
 #include "script/script.h"
 #include "script/standard.h"
 #include "util.h"
-
-#ifdef ENABLE_WALLET
-#include "wallet/wallet.h"
-#endif
 
 #ifdef WIN32
 #ifdef _WIN32_WINNT
@@ -84,9 +79,6 @@ extern double NSAppKitVersionNumber;
 #if !defined(NSAppKitVersionNumber10_9)
 #define NSAppKitVersionNumber10_9 1265
 #endif
-#include <QProcess>
-
-void ForceActivation();
 #endif
 
 namespace GUIUtil {
@@ -133,7 +125,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Dogecoin address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Dogeseedz address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
@@ -151,8 +143,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no dogecoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("dogecoin"))
+    // return if URI is not valid or is no dogeseedz: URI
+    if(!uri.isValid() || uri.scheme() != QString("dogeseedz"))
         return false;
 
     SendCoinsRecipient rv;
@@ -212,13 +204,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert dogecoin:// to dogecoin:
+    // Convert dogeseedz:// to dogeseedz:
     //
-    //    Cannot handle this later, because dogecoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because dogeseedz:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("dogecoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("dogeseedz://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "dogecoin:");
+        uri.replace(0, 11, "dogeseedz:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -226,7 +218,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("dogecoin:%1").arg(info.address);
+    QString ret = QString("dogeseedz:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -252,15 +244,13 @@ QString formatBitcoinURI(const SendCoinsRecipient &info)
     return ret;
 }
 
-#ifdef ENABLE_WALLET
 bool isDust(const QString& address, const CAmount& amount)
 {
     CTxDestination dest = CBitcoinAddress(address.toStdString()).Get();
     CScript script = GetScriptForDestination(dest);
     CTxOut txOut(amount, script);
-    return txOut.IsDust(CWallet::discardThreshold);
+    return txOut.IsDust(dustRelayFee);
 }
-#endif
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
 {
@@ -412,23 +402,6 @@ bool isObscured(QWidget *w)
         && checkPoint(QPoint(0, w->height() - 1), w)
         && checkPoint(QPoint(w->width() - 1, w->height() - 1), w)
         && checkPoint(QPoint(w->width() / 2, w->height() / 2), w));
-}
-
-void bringToFront(QWidget* w)
-{
-    #ifdef Q_OS_MAC
-        ForceActivation();
-    #endif
-    if (w) {
-        // activateWindow() (sometimes) helps with keyboard focus on Windows
-        if (w->isMinimized()) {
-            w->showNormal();
-        } else {
-            w->show();
-        }
-        w->activateWindow();
-        w->raise();
-    }
 }
 
 void openDebugLogfile()
@@ -624,10 +597,10 @@ boost::filesystem::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Dogecoin.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Dogeseedz.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Dogecoin (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Dogecoin (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Dogeseedz (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Dogeseedz (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -768,9 +741,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Dogecoin\n";
+            optionFile << "Name=Dogeseedz\n";
         else
-            optionFile << strprintf("Name=Dogecoin (%s)\n", chain);
+            optionFile << strprintf("Name=Dogeseedz (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", GetBoolArg("-testnet", false), GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -966,38 +939,6 @@ QString formatServicesStr(quint64 mask)
 QString formatPingTime(double dPingTime)
 {
     return (dPingTime == std::numeric_limits<int64_t>::max()/1e6 || dPingTime == 0) ? QObject::tr("N/A") : QString(QObject::tr("%1 ms")).arg(QString::number((int)(dPingTime * 1000), 10));
-}
-
-QString formatDataSizeValue(uint64_t uValue)
-{
-    // Why handle these comparisons directly, instead of a clever algorithm?
-    // This is likely to be called in a tight loop, so avoid the overhead of
-    // setting up a constant list and walking an iterator.
-    static const uint64_t TERABYTE_SIZE = UINT64_C(1024*1024*1024*1024);
-    static const uint64_t GIGABYTE_SIZE = UINT64_C(1024*1024*1024);
-    static const uint64_t MEGABYTE_SIZE = UINT64_C(1024*1024);
-    static const uint64_t KILOBYTE_SIZE = UINT64_C(1024);
-
-    QString unitFormat = QObject::tr("%1 B");
-
-    if (uValue == std::numeric_limits<int64_t>::max()/1e6 || uValue == 0)
-        return QObject::tr("N/A");
-
-    if (uValue > TERABYTE_SIZE) {
-        unitFormat = QObject::tr("%1 TB");
-        uValue /= TERABYTE_SIZE;
-    } else if (uValue > GIGABYTE_SIZE) {
-        unitFormat = QObject::tr("%1 GB");
-        uValue /= GIGABYTE_SIZE;
-    } else if (uValue > MEGABYTE_SIZE) {
-        unitFormat = QObject::tr("%1 MB");
-        uValue /= MEGABYTE_SIZE;
-    } else if (uValue > KILOBYTE_SIZE) {
-        unitFormat = QObject::tr("%1 KB");
-        uValue /= KILOBYTE_SIZE;
-    }
-
-    return QString(unitFormat).arg(QString::number(uValue), 10);
 }
 
 QString formatTimeOffset(int64_t nTimeOffset)

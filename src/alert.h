@@ -50,7 +50,8 @@ public:
 
     template <typename Stream, typename Operation>
     inline void SerializationOp(Stream& s, Operation ser_action) {
-        READWRITE(nVersion);
+        READWRITE(this->nVersion);
+        nVersion = this->nVersion;
         READWRITE(nRelayUntil);
         READWRITE(nExpiration);
         READWRITE(nID);

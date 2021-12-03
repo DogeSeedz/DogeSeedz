@@ -68,7 +68,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>DogeseedzGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -114,8 +114,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Dogecoin address</source>
-        <translation>Enviar monedas a una dirección Dogecoin</translation>
+        <source>Send coins to a Dogeseedz address</source>
+        <translation>Enviar monedas a una dirección Dogeseedz</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -130,8 +130,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Dogeseedz</source>
+        <translation>Dogeseedz</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -158,12 +158,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Dogecoin addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones Dogecoin para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your Dogeseedz addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Dogeseedz para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Dogecoin addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Dogecoin especificas</translation>
+        <source>Verify messages to ensure they were signed with specified Dogeseedz addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Dogeseedz especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -582,7 +582,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>dogeseedz-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:</translation>
@@ -608,8 +608,8 @@
         <translation>Correr en segundo plano como daemon y aceptar comandos</translation>
     </message>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Core</translation>
+        <source>Dogeseedz Core</source>
+        <translation>Dogeseedz Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

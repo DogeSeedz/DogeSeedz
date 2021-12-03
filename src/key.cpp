@@ -86,7 +86,7 @@ static int ec_privkey_export_der(const secp256k1_context *ctx, unsigned char *pr
         memcpy(ptr, begin, sizeof(begin)); ptr += sizeof(begin);
         memcpy(ptr, key32, 32); ptr += 32;
         memcpy(ptr, middle, sizeof(middle)); ptr += sizeof(middle);
-        pubkeylen = CPubKey::COMPRESSED_SIZE;
+        pubkeylen = 33;
         secp256k1_ec_pubkey_serialize(ctx, ptr, &pubkeylen, &pubkey, SECP256K1_EC_COMPRESSED);
         ptr += pubkeylen;
         *privkeylen = ptr - privkey;
@@ -111,7 +111,7 @@ static int ec_privkey_export_der(const secp256k1_context *ctx, unsigned char *pr
         memcpy(ptr, begin, sizeof(begin)); ptr += sizeof(begin);
         memcpy(ptr, key32, 32); ptr += 32;
         memcpy(ptr, middle, sizeof(middle)); ptr += sizeof(middle);
-        pubkeylen = CPubKey::SIZE;
+        pubkeylen = 65;
         secp256k1_ec_pubkey_serialize(ctx, ptr, &pubkeylen, &pubkey, SECP256K1_EC_UNCOMPRESSED);
         ptr += pubkeylen;
         *privkeylen = ptr - privkey;
@@ -155,7 +155,7 @@ CPrivKey CKey::GetPrivKey() const {
 CPubKey CKey::GetPubKey() const {
     assert(fValid);
     secp256k1_pubkey pubkey;
-    size_t clen = CPubKey::SIZE;
+    size_t clen = 65;
     CPubKey result;
     int ret = secp256k1_ec_pubkey_create(secp256k1_context_sign, &pubkey, begin());
     assert(ret);
@@ -227,7 +227,7 @@ bool CKey::Derive(CKey& keyChild, ChainCode &ccChild, unsigned int nChild, const
     std::vector<unsigned char, secure_allocator<unsigned char>> vout(64);
     if ((nChild >> 31) == 0) {
         CPubKey pubkey = GetPubKey();
-        assert(pubkey.begin() + CPubKey::COMPRESSED_SIZE == pubkey.end());
+        assert(pubkey.begin() + 33 == pubkey.end());
         BIP32Hash(cc, nChild, *pubkey.begin(), pubkey.begin()+1, vout.data());
     } else {
         assert(begin() + 32 == end());

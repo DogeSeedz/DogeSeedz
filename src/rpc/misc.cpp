@@ -79,32 +79,32 @@ UniValue getinfo(const JSONRPCRequest& request)
     GetProxy(NET_IPV4, proxy);
 
     UniValue obj(UniValue::VOBJ);
-    obj.pushKV("version", CLIENT_VERSION);
-    obj.pushKV("protocolversion", PROTOCOL_VERSION);
+    obj.push_back(Pair("version", CLIENT_VERSION));
+    obj.push_back(Pair("protocolversion", PROTOCOL_VERSION));
 #ifdef ENABLE_WALLET
     if (pwalletMain) {
-        obj.pushKV("walletversion", pwalletMain->GetVersion());
-        obj.pushKV("balance",       ValueFromAmount(pwalletMain->GetBalance()));
+        obj.push_back(Pair("walletversion", pwalletMain->GetVersion()));
+        obj.push_back(Pair("balance",       ValueFromAmount(pwalletMain->GetBalance())));
     }
 #endif
-    obj.pushKV("blocks",        (int)chainActive.Height());
-    obj.pushKV("timeoffset",    GetTimeOffset());
+    obj.push_back(Pair("blocks",        (int)chainActive.Height()));
+    obj.push_back(Pair("timeoffset",    GetTimeOffset()));
     if(g_connman)
-        obj.pushKV("connections",   (int)g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL));
-    obj.pushKV("proxy",         (proxy.IsValid() ? proxy.proxy.ToStringIPPort() : string()));
-    obj.pushKV("difficulty",    (double)GetDifficulty());
-    obj.pushKV("testnet",       Params().NetworkIDString() == CBaseChainParams::TESTNET);
+        obj.push_back(Pair("connections",   (int)g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL)));
+    obj.push_back(Pair("proxy",         (proxy.IsValid() ? proxy.proxy.ToStringIPPort() : string())));
+    obj.push_back(Pair("difficulty",    (double)GetDifficulty()));
+    obj.push_back(Pair("testnet",       Params().NetworkIDString() == CBaseChainParams::TESTNET));
 #ifdef ENABLE_WALLET
     if (pwalletMain) {
-        obj.pushKV("keypoololdest", pwalletMain->GetOldestKeyPoolTime());
-        obj.pushKV("keypoolsize",   (int)pwalletMain->GetKeyPoolSize());
+        obj.push_back(Pair("keypoololdest", pwalletMain->GetOldestKeyPoolTime()));
+        obj.push_back(Pair("keypoolsize",   (int)pwalletMain->GetKeyPoolSize()));
     }
     if (pwalletMain && pwalletMain->IsCrypted())
-        obj.pushKV("unlocked_until", nWalletUnlockTime);
-    obj.pushKV("paytxfee",      ValueFromAmount(payTxFee.GetFeePerK()));
+        obj.push_back(Pair("unlocked_until", nWalletUnlockTime));
+    obj.push_back(Pair("paytxfee",      ValueFromAmount(payTxFee.GetFeePerK())));
 #endif
-    obj.pushKV("relayfee",      ValueFromAmount(::minRelayTxFeeRate.GetFeePerK()));
-    obj.pushKV("errors",        GetWarnings("statusbar"));
+    obj.push_back(Pair("relayfee",      ValueFromAmount(::minRelayTxFee.GetFeePerK())));
+    obj.push_back(Pair("errors",        GetWarnings("statusbar")));
     return obj;
 }
 
@@ -117,10 +117,10 @@ public:
     UniValue operator()(const CKeyID &keyID) const {
         UniValue obj(UniValue::VOBJ);
         CPubKey vchPubKey;
-        obj.pushKV("isscript", false);
+        obj.push_back(Pair("isscript", false));
         if (pwalletMain && pwalletMain->GetPubKey(keyID, vchPubKey)) {
-            obj.pushKV("pubkey", HexStr(vchPubKey));
-            obj.pushKV("iscompressed", vchPubKey.IsCompressed());
+            obj.push_back(Pair("pubkey", HexStr(vchPubKey)));
+            obj.push_back(Pair("iscompressed", vchPubKey.IsCompressed()));
         }
         return obj;
     }
@@ -128,20 +128,20 @@ public:
     UniValue operator()(const CScriptID &scriptID) const {
         UniValue obj(UniValue::VOBJ);
         CScript subscript;
-        obj.pushKV("isscript", true);
+        obj.push_back(Pair("isscript", true));
         if (pwalletMain && pwalletMain->GetCScript(scriptID, subscript)) {
             std::vector<CTxDestination> addresses;
             txnouttype whichType;
             int nRequired;
             ExtractDestinations(subscript, whichType, addresses, nRequired);
-            obj.pushKV("script", GetTxnOutputType(whichType));
-            obj.pushKV("hex", HexStr(subscript.begin(), subscript.end()));
+            obj.push_back(Pair("script", GetTxnOutputType(whichType)));
+            obj.push_back(Pair("hex", HexStr(subscript.begin(), subscript.end())));
             UniValue a(UniValue::VARR);
             BOOST_FOREACH(const CTxDestination& addr, addresses)
                 a.push_back(CBitcoinAddress(addr).ToString());
-            obj.pushKV("addresses", a);
+            obj.push_back(Pair("addresses", a));
             if (whichType == TX_MULTISIG)
-                obj.pushKV("sigsrequired", nRequired);
+                obj.push_back(Pair("sigsrequired", nRequired));
         }
         return obj;
     }
@@ -186,24 +186,24 @@ UniValue validateaddress(const JSONRPCRequest& request)
     bool isValid = address.IsValid();
 
     UniValue ret(UniValue::VOBJ);
-    ret.pushKV("isvalid", isValid);
+    ret.push_back(Pair("isvalid", isValid));
     if (isValid)
     {
         CTxDestination dest = address.Get();
         string currentAddress = address.ToString();
-        ret.pushKV("address", currentAddress);
+        ret.push_back(Pair("address", currentAddress));
 
         CScript scriptPubKey = GetScriptForDestination(dest);
-        ret.pushKV("scriptPubKey", HexStr(scriptPubKey.begin(), scriptPubKey.end()));
+        ret.push_back(Pair("scriptPubKey", HexStr(scriptPubKey.begin(), scriptPubKey.end())));
 
 #ifdef ENABLE_WALLET
         isminetype mine = pwalletMain ? IsMine(*pwalletMain, dest) : ISMINE_NO;
-        ret.pushKV("ismine", (mine & ISMINE_SPENDABLE) ? true : false);
-        ret.pushKV("iswatchonly", (mine & ISMINE_WATCH_ONLY) ? true: false);
+        ret.push_back(Pair("ismine", (mine & ISMINE_SPENDABLE) ? true : false));
+        ret.push_back(Pair("iswatchonly", (mine & ISMINE_WATCH_ONLY) ? true: false));
         UniValue detail = boost::apply_visitor(DescribeAddressVisitor(), dest);
         ret.pushKVs(detail);
         if (pwalletMain && pwalletMain->mapAddressBook.count(dest))
-            ret.pushKV("account", pwalletMain->mapAddressBook[dest].name);
+            ret.push_back(Pair("account", pwalletMain->mapAddressBook[dest].name));
         CKeyID keyID;
         if (pwalletMain) {
             const auto& meta = pwalletMain->mapKeyMetadata;
@@ -212,10 +212,10 @@ UniValue validateaddress(const JSONRPCRequest& request)
                 it = meta.find(CScriptID(scriptPubKey));
             }
             if (it != meta.end()) {
-                ret.pushKV("timestamp", it->second.nCreateTime);
+                ret.push_back(Pair("timestamp", it->second.nCreateTime));
                 if (!it->second.hdKeypath.empty()) {
-                    ret.pushKV("hdkeypath", it->second.hdKeypath);
-                    ret.pushKV("hdmasterkeyid", it->second.hdMasterKeyID.GetHex());
+                    ret.push_back(Pair("hdkeypath", it->second.hdKeypath));
+                    ret.push_back(Pair("hdmasterkeyid", it->second.hdMasterKeyID.GetHex()));
                 }
             }
         }
@@ -325,8 +325,8 @@ UniValue createmultisig(const JSONRPCRequest& request)
     CBitcoinAddress address(innerID);
 
     UniValue result(UniValue::VOBJ);
-    result.pushKV("address", address.ToString());
-    result.pushKV("redeemScript", HexStr(inner.begin(), inner.end()));
+    result.push_back(Pair("address", address.ToString()));
+    result.push_back(Pair("redeemScript", HexStr(inner.begin(), inner.end())));
 
     return result;
 }
@@ -458,12 +458,12 @@ static UniValue RPCLockedMemoryInfo()
 {
     LockedPool::Stats stats = LockedPoolManager::Instance().stats();
     UniValue obj(UniValue::VOBJ);
-    obj.pushKV("used", uint64_t(stats.used));
-    obj.pushKV("free", uint64_t(stats.free));
-    obj.pushKV("total", uint64_t(stats.total));
-    obj.pushKV("locked", uint64_t(stats.locked));
-    obj.pushKV("chunks_used", uint64_t(stats.chunks_used));
-    obj.pushKV("chunks_free", uint64_t(stats.chunks_free));
+    obj.push_back(Pair("used", uint64_t(stats.used)));
+    obj.push_back(Pair("free", uint64_t(stats.free)));
+    obj.push_back(Pair("total", uint64_t(stats.total)));
+    obj.push_back(Pair("locked", uint64_t(stats.locked)));
+    obj.push_back(Pair("chunks_used", uint64_t(stats.chunks_used)));
+    obj.push_back(Pair("chunks_free", uint64_t(stats.chunks_free)));
     return obj;
 }
 
@@ -492,7 +492,7 @@ UniValue getmemoryinfo(const JSONRPCRequest& request)
             + HelpExampleRpc("getmemoryinfo", "")
         );
     UniValue obj(UniValue::VOBJ);
-    obj.pushKV("locked", RPCLockedMemoryInfo());
+    obj.push_back(Pair("locked", RPCLockedMemoryInfo()));
     return obj;
 }
 

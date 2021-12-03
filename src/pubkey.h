@@ -38,16 +38,32 @@ typedef uint256 ChainCode;
 /** An encapsulated public key. */
 class CPubKey
 {
-public:
-    //! Construct an invalid public key.
+private:
 
-    static constexpr unsigned int SIZE                   = 65;
-    static constexpr unsigned int COMPRESSED_SIZE        = 33;
+    /**
+     * Just store the serialized data.
+     * Its length can very cheaply be computed from the first byte.
+     */
+    unsigned char vch[65];
 
- bool static ValidSize(const std::vector<unsigned char> &vch) {
-      return vch.size() > 0 && GetLen(vch[0]) == vch.size();
+    //! Compute the length of a pubkey with a given first byte.
+    unsigned int static GetLen(unsigned char chHeader)
+    {
+        if (chHeader == 2 || chHeader == 3)
+            return 33;
+        if (chHeader == 4 || chHeader == 6 || chHeader == 7)
+            return 65;
+        return 0;
     }
 
+    //! Set this key data to be invalid
+    void Invalidate()
+    {
+        vch[0] = 0xFF;
+    }
+
+public:
+    //! Construct an invalid public key.
     CPubKey()
     {
         Invalidate();
@@ -111,7 +127,7 @@ public:
     void Unserialize(Stream& s)
     {
         unsigned int len = ::ReadCompactSize(s);
-        if (len <= SIZE) {
+        if (len <= 65) {
             s.read((char*)vch, len);
         } else {
             // invalid pubkey, skip available data
@@ -175,32 +191,6 @@ public:
 
     //! Derive BIP32 child pubkey.
     bool Derive(CPubKey& pubkeyChild, ChainCode &ccChild, unsigned int nChild, const ChainCode& cc) const;
-
-private:
-
-    /**
-     * Just store the serialized data.
-     * Its length can very cheaply be computed from the first byte.
-     */
-    unsigned char vch[SIZE];
-
-    //! Compute the length of a pubkey with a given first byte.
-    unsigned int static GetLen(unsigned char chHeader)
-    {
-        if (chHeader == 2 || chHeader == 3)
-            return CPubKey::COMPRESSED_SIZE;
-        if (chHeader == 4 || chHeader == 6 || chHeader == 7)
-            return CPubKey::SIZE;
-        return 0;
-    }
-
-    //! Set this key data to be invalid
-    void Invalidate()
-    {
-        vch[0] = 0xFF;
-    }
-
-
 };
 
 struct CExtPubKey {

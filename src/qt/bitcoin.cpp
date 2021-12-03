@@ -197,7 +197,7 @@ class BitcoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit BitcoinApplication();
+    explicit BitcoinApplication(int &argc, char **argv);
     ~BitcoinApplication();
 
 #ifdef ENABLE_WALLET
@@ -312,11 +312,8 @@ void BitcoinCore::shutdown()
     }
 }
 
-static int qt_argc = 1;
-static const char* qt_argv = "dogecoin-qt";
-
-BitcoinApplication::BitcoinApplication():
-    QApplication(qt_argc, const_cast<char **>(&qt_argv)),
+BitcoinApplication::BitcoinApplication(int &argc, char **argv):
+    QApplication(argc, argv),
     coreThread(0),
     optionsModel(0),
     clientModel(0),
@@ -520,7 +517,7 @@ void BitcoinApplication::shutdownResult(int retval)
 
 void BitcoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, BitcoinGUI::tr("Runaway exception"), BitcoinGUI::tr("A fatal error occurred. Dogecoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Dogeseedz can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
@@ -553,7 +550,7 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(bitcoin);
     Q_INIT_RESOURCE(bitcoin_locale);
 
-    BitcoinApplication app;
+    BitcoinApplication app(argc, argv);
 #if QT_VERSION > 0x050100
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);

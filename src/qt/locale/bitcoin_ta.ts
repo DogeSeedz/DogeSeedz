@@ -52,7 +52,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>DogeseedzGUI</name>
     <message>
         <source>&amp;Wow</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Dogeseedz</source>
+        <translation>Dogeseedz</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -706,10 +706,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>dogeseedz-core</name>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin மையம்</translation>
+        <source>Dogeseedz Core</source>
+        <translation>Dogeseedz மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

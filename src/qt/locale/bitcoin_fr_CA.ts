@@ -7,7 +7,7 @@
     </message>
     <message>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Copier l'adresse surlignée à votre presse-papier</translation>
+        <translation>Copier l'adresse surligné a votre presse-papier</translation>
     </message>
     <message>
         <source>&amp;Delete</source>
@@ -21,39 +21,39 @@
     <name>AskPassphraseDialog</name>
     <message>
         <source>Enter passphrase</source>
-        <translation>Entrer le mot de passe</translation>
+        <translation>Entrer Mot de Passe</translation>
     </message>
     <message>
         <source>New passphrase</source>
-        <translation>Nouveau mot de passe</translation>
+        <translation>Nouveau Mot de passe</translation>
     </message>
     <message>
         <source>Repeat new passphrase</source>
-        <translation>Répéter le nouveau mot de passe</translation>
+        <translation>Répéter Mot de Passe</translation>
     </message>
     </context>
 <context>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>DogeseedzGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
     <message>
         <source>(un)select all</source>
-        <translation>Tout (dé)sélectionner</translation>
+        <translation>Toute sélectionner </translation>
     </message>
     </context>
 <context>
     <name>EditAddressDialog</name>
     <message>
         <source>&amp;Label</source>
-        <translation>Étiquette</translation>
+        <translation>Record</translation>
     </message>
     <message>
         <source>&amp;Address</source>
-        <translation>Adresse</translation>
+        <translation>Addresse</translation>
     </message>
     </context>
 <context>
@@ -66,7 +66,7 @@
     <name>Intro</name>
     <message>
         <source>Welcome</source>
-        <translation>Bienvenue</translation>
+        <translation>Bienvenue </translation>
     </message>
     </context>
 <context>
@@ -154,6 +154,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>dogeseedz-core</name>
     </context>
 </TS>

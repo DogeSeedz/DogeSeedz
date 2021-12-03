@@ -64,10 +64,10 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>DogeseedzGUI</name>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin Core</translation>
+        <source>Dogeseedz</source>
+        <translation>Dogeseedz Core</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -234,14 +234,14 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>dogeseedz-core</name>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Core</translation>
+        <source>Dogeseedz Core</source>
+        <translation>Dogeseedz Core</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>bitcoin-core</translation>
+        <translation>dogeseedz-core</translation>
     </message>
     <message>
         <source>Information</source>

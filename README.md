@@ -1,63 +1,26 @@
-<h1 align="center">
-Dogecoin Core [DOGE, Ð]  
-<br/><br/>
-<img src="https://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png" alt="Dogecoin" width="300"/>
-</h1>
+# Dogegold Core [DOGEG, ÐG]
 
-<div align="center">
+![Dogegold](https://dogegold.net/wallet_bgcoin.png)
 
-[![DogecoinBadge](https://img.shields.io/badge/Doge-Coin-yellow.svg)](https://dogecoin.com)
-[![MuchWow](https://img.shields.io/badge/Much-Wow-yellow.svg)](https://dogecoin.com)
+Dogegold is a cryptocurrency like Bitcoin, although it does not use SHA256 as
+its proof of work (POW). Taking development cues from Tenebrix and Litecoin,
+Dogegold currently employs a simplified variant of scrypt.
+- **Website:** [Dogegold.net.](https://Dogegold.net)
 
-</div>
+## License – Much license ⚖️
+Dogegold Core is released under the terms of the MIT license. See
+[COPYING](COPYING) for more information or see
+[opensource.org](https://opensource.org/licenses/MIT)
 
-Select language: EN | [CN](./README_zh_CN.md)
+## Development and contributions – omg developers
+Development is ongoing, and the development team, as well as other volunteers,
+can freely work in their own trees and submit pull requests when features or
+bug fixes are ready.
 
-Dogecoin is a community-driven cryptocurrency that was inspired by a Shiba Inu meme. The Dogecoin Core software allows anyone to operate a node in the Dogecoin blockchain networks and uses the Scrypt hashing method for Proof of Work. It is adapted from Bitcoin Core and other cryptocurrencies.
-
-For information about the default fees used on the Dogecoin network, please
-refer to the [fee recommendation](doc/fee-recommendation.md).
-
-**Website:** [dogecoin.com](https://dogecoin.com)
-
-## Usage 💻
-
-To start your journey with Dogecoin Core, see the [installation guide](INSTALL.md) and the [getting started](doc/getting-started.md) tutorial.
-
-The JSON-RPC API provided by Dogecoin Core is self-documenting and can be browsed with `dogecoin-cli help`, while detailed information for each command can be viewed with `dogecoin-cli help <command>`. Alternatively, see the [Bitcoin Core documentation](https://developer.bitcoin.org/reference/rpc/) - which implement a similar protocol - to get a browsable version.
-
-### Such ports
-
-Dogecoin Core by default uses port `22556` for peer-to-peer communication that
-is needed to synchronize the "mainnet" blockchain and stay informed of new
-transactions and blocks. Additionally, a JSONRPC port can be opened, which
-defaults to port `22555` for mainnet nodes. It is strongly recommended to not
-expose RPC ports to the public internet.
-
-| Function | mainnet | testnet | regtest |
-| :------- | ------: | ------: | ------: |
-| P2P      |   22556 |   44556 |   18444 |
-| RPC      |   22555 |   44555 |   18332 |
-
-## Ongoing development - Moon plan 🌒
-
-Dogecoin Core is an open source and community driven software. The development
-process is open and publicly visible; anyone can see, discuss and work on the
-software.
-
-Main development resources:
-
-* [Github Projects](https://github.com/dogecoin/dogecoin/projects) is used to
-  follow planned and in-progress work for upcoming releases.
-* [Github Discussion](https://github.com/dogecoin/dogecoin/discussions) is used
-  to discuss features, planned and unplanned, related to both the development of
-  the Dogecoin Core software, the underlying protocols and the DOGE asset.  
-* [Dogecoindev subreddit](https://www.reddit.com/r/dogecoindev/)
-
-### Version strategy
+#### Version strategy
 Version numbers are following ```major.minor.patch``` semantics.
 
-### Branches
+#### Branches
 There are 3 types of branches in this repository:
 
 - **master:** Stable, contains the latest version of the latest *major.minor* release.
@@ -69,37 +32,100 @@ There are 3 types of branches in this repository:
 *submitted against those. Maintenance branches are there for **bug fixes only,***
 *please submit new features against the development branch with the highest version.*
 
-## Contributing 🤝
+#### Contributions ✍️
 
-If you find a bug or experience issues with this software, please report it
-using the [issue system](https://github.com/dogecoin/dogecoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
+Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
+submit new unit tests for old code. Unit tests can be compiled and run
+(assuming they weren't disabled in configure) with: `make check`. Further details on running
+and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
 
-Please see [the contribution guide](CONTRIBUTING.md) to see how you can
-participate in the development of Dogecoin Core. There are often
-[topics seeking help](https://github.com/dogecoin/dogecoin/labels/help%20wanted)
-where your contributions will have high impact and get very appreciation. wow.
+There are also [regression and integration tests](/qa) of the RPC interface, written
+in Python, that are run automatically on the build server.
+These tests can be run (if the [test dependencies](/qa) are installed) with: `qa/pull-tester/rpc-tests.py`
 
-## Communities 🚀🍾
-
-You can join the communities on different social media.
-To see what's going on, meet people & discuss, find the lastest meme, learn
-about Dogecoin, give or ask for help, to share your project.
-
-Here are some places to visit:
-
-* [Dogecoin subreddit](https://www.reddit.com/r/dogecoin/)
-* [Dogeducation subreddit](https://www.reddit.com/r/dogeducation/)
-* [Discord](https://discord.gg/dogecoin)
-* [Dogecoin Twitter](https://twitter.com/dogecoin)
+Changes should be tested by somebody other than the developer who wrote the
+code. This is especially important for large or high-risk changes. It is useful
+to add a test plan to the pull request description if testing the changes is
+not straightforward.
 
 ## Very Much Frequently Asked Questions ❓
 
-Do you have a question regarding Dogecoin? An answer is perhaps already in the
-[FAQ](doc/FAQ.md) or the
-[Q&A section](https://github.com/dogecoin/dogecoin/discussions/categories/q-a)
-of the discussion board!
+### How much dogegold can exist? – So many puppies! 🐕
+Around block 1,000,000 there will be approximately 9,000,000,000 coins.
+Each subsequent block will grant 100 coins to encourage miners to continue to
+secure the network and make up for lost wallets on hard drives/phones/lost
+encryption passwords/etc.
 
-## License - Much license ⚖️
-Dogecoin Core is released under the terms of the MIT license. See
-[COPYING](COPYING) for more information or see
-[opensource.org](https://opensource.org/licenses/MIT)
+
+### Such mining information ⛏
+
+Dogegold uses a simplified variant of the scrypt key derivation function as its
+proof of work with a target time of 30 seconds per block and difficulty
+readjustment after every block.  
+
+
+**The current block reward schedule:**
+
+Block 1 : 1000000000 Dogegold
+Block 2 : 10000000 Dogegold
+Block 10 : 10000 Dogegold
+Block 100 : 100 Dogegold
+Block 2880 : 500 Dogegold
+Block 5760 : 1000 Dogegold
+Block 11520 : 1500 Dogegold
+Block 23040 : 5000 Dogegold
+Block 46080 : 7500 Dogegold
+Block 50000 : 9000 Dogegold
+Block 100000 : 10000 Dogegold
+Block 200000 : 15000 Dogegold
+Block 300000 : 20000 Dogegold
+Block 400000 : 25000 Dogegold
+Block 500000 : 10000 Dogegold
+Block 1000000 : 100 Dogegold
+
+### Wow plz make Dogegoldd/Dogegold-cli/Dogegold-qt
+
+  The following are developer notes on how to build Dogegold on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+
+  - [OSX Build Notes](doc/build-osx.md)
+  - [Unix Build Notes](doc/build-unix.md)
+  - [Windows Build Notes](doc/build-windows.md)
+
+### Such ports
+
+- RPC 33111
+- P2P 13131
+
+## Development tips and tricks
+
+**compiling for debugging**
+
+Run `configure` with the `--enable-debug` option, then `make`. Or run `configure` with
+`CXXFLAGS="-g -ggdb -O0"` or whatever debug flags you need.
+
+**debug.log**
+
+If the code is behaving strangely, take a look in the debug.log file in the data directory;
+error and debugging messages are written there.
+
+The `-debug=...` command-line option controls debugging; running with just `-debug` will turn
+on all categories (and give you a very large debug.log file).
+
+The Qt code routes `qDebug()` output to debug.log under category "qt": run with `-debug=qt`
+to see it.
+
+**testnet and regtest modes**
+
+Run with the `-testnet` option to run with "play Dogegolds" on the test network, if you
+are testing multi-machine code that needs to operate across the internet.
+
+If you are testing something that can run on one machine, run with the `-regtest` option.
+In regression test mode, blocks can be created on-demand; see qa/rpc-tests/ for tests
+that run in `-regtest` mode.
+
+**DEBUG_LOCKORDER**
+
+Dogegold Core is a multithreaded application, and deadlocks or other multithreading bugs
+can be very difficult to track down. Compiling with `-DDEBUG_LOCKORDER` (`configure
+CXXFLAGS="-DDEBUG_LOCKORDER -g"`) inserts run-time checks to keep track of which locks
+are held, and adds warnings to the debug.log file if inconsistencies are detected.

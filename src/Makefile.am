@@ -102,8 +102,6 @@ BITCOIN_CORE_H = \
   cuckoocache.h \
   dogecoin.cpp \
   dogecoin.h \
-  dogecoin-fees.cpp \
-  dogecoin-fees.h \
   httprpc.h \
   httpserver.h \
   indirectmap.h \
@@ -356,10 +354,7 @@ libdogecoin_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-
 libdogecoin_util_a_SOURCES += compat/glibc_compat.cpp
-AM_LDFLAGS += $(COMPAT_LDFLAGS)
-
 endif
 
 # cli: shared between bitcoin-cli and bitcoin-qt

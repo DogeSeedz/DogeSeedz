@@ -62,12 +62,12 @@
         <translation>Adresy odbioru</translation>
     </message>
     <message>
-        <source>These are your Dogecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tutaj znajdują się adresy Dogecoin na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
+        <source>These are your Dogeseedz addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tutaj znajdują się adresy Dogeseedz na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
     </message>
     <message>
-        <source>These are your Dogecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To są twoje adresy Dogecoin do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
+        <source>These are your Dogeseedz addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To są twoje adresy Dogeseedz do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,7 +168,7 @@
         <translation>Potwierdź szyfrowanie portfela</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DOGECOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DOGESEEDZOLDS&lt;/b&gt;!</source>
         <translation>Uwaga: jeśli zaszyfrujesz swój portfel i zgubisz hasło &lt;b&gt;STRACISZ WSZYSTKIE SWOJE DOGECOINY&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -180,8 +180,8 @@
         <translation>Portfel zaszyfrowany</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dogecoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich Dogecoinów przed kradzieżą przez wirusy lub trojany mogące zainfekować Twój komputer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dogeseedz from being stolen by malware infecting your computer.</source>
+        <translation>%1 zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich dogeseedzów przed kradzieżą przez wirusy lub trojany mogące zainfekować Twój komputer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -232,7 +232,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>DogeseedzGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Podpisz wiado&amp;mość...</translation>
@@ -322,8 +322,8 @@
         <translation>Ponowne indeksowanie bloków na dysku...</translation>
     </message>
     <message>
-        <source>Send coins to a Dogecoin address</source>
-        <translation>Wyślij monety na adres Dogecoinowy</translation>
+        <source>Send coins to a Dogeseedz address</source>
+        <translation>Wyślij monety na adres dogeseedzowy</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -346,8 +346,8 @@
         <translation>&amp;Zweryfikuj wiadomość...</translation>
     </message>
     <message>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Dogeseedz</source>
+        <translation>Dogeseedz</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -374,12 +374,12 @@
         <translation>Szyfruj klucze prywatne, które są w twoim portfelu</translation>
     </message>
     <message>
-        <source>Sign messages with your Dogecoin addresses to prove you own them</source>
-        <translation>Podpisz wiadomości swoim adresem Dogecoinowym, aby udowodnić jego posiadanie</translation>
+        <source>Sign messages with your Dogeseedz addresses to prove you own them</source>
+        <translation>Podpisz wiadomości swoim adresem aby udowodnić jego posiadanie</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Dogecoin addresses</source>
-        <translation>Zweryfikuj wiadomość, aby upewnić się, że została podpisana podanym adresem Dogecoinowym.</translation>
+        <source>Verify messages to ensure they were signed with specified Dogeseedz addresses</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem dogeseedzowym.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -398,8 +398,8 @@
         <translation>Pasek zakładek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and dogecoin: URIs)</source>
-        <translation>Żądaj płatności (generuje kod QR oraz Dogecoinowe URI)</translation>
+        <source>Request payments (generates QR codes and dogeseedz: URIs)</source>
+        <translation>Żądaj płatności (generuje kod QR oraz dogeseedzowe URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -410,16 +410,16 @@
         <translation>Pokaż listę adresów i etykiet użytych do odbierania</translation>
     </message>
     <message>
-        <source>Open a dogecoin: URI or payment request</source>
-        <translation>Otwórz Dogecoinowe: URI lub żądanie zapłaty</translation>
+        <source>Open a dogeseedz: URI or payment request</source>
+        <translation>Otwórz URI dogeseedz: lub żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Opcje linii komend</translation>
     </message>
-    <message>
-        <source>%n active connection(s) to Dogecoin network</source>
-        <translation>%n aktywnych połączeń do sieci Dogecoin</translation>
+    <message numerus="yes">
+        <source>%n active connection(s) to Dogeseedz network</source>
+        <translation><numerusform>%n aktywnych połączeń do sieci Dogeseedz</numerusform><numerusform>%n aktywnych połączeń do sieci Dogeseedz</numerusform><numerusform>%n aktywnych połączeń do sieci Dogeseedz</numerusform><numerusform>%n aktywnych połączeń do sieci Dogeseedz</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -427,11 +427,11 @@
     </message>
     <message>
         <source>Processing blocks on disk...</source>
-        <translation>Przetwarzanie bloków na dysku...</translation>
+        <translation>Przetwarzanie blocks on disk...</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
-        <translation>Przetworzono %n bloków historii transakcji.</translation>
+        <translation><numerusform>Przetworzono %n bloków historii transakcji.</numerusform><numerusform>Przetworzono %n bloków historii transakcji.</numerusform><numerusform>Przetworzono %n bloków historii transakcji.</numerusform><numerusform>Przetworzono %n bloków historii transakcji.</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -462,7 +462,7 @@
         <translation>Aktualny</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Dogecoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Dogeseedz command-line options</source>
         <translation>Pokaż pomoc %1 aby zobaczyć listę wszystkich opcji lnii poleceń.</translation>
     </message>
     <message>
@@ -471,7 +471,7 @@
     </message>
     <message>
         <source>Catching up...</source>
-        <translation>Trwa synchronizacja...</translation>
+        <translation>Trwa synchronizacja…</translation>
     </message>
     <message>
         <source>Date: %1
@@ -777,7 +777,7 @@
     </message>
     <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
-        <translation>Wybierz język, na przykład "de_DE" (domyślnie: język systemowy)</translation>
+        <translation>Wybierz język, na przykład «de_DE» (domyślnie: język systemowy)</translation>
     </message>
     <message>
         <source>Start minimized</source>
@@ -811,8 +811,8 @@
         <translation>Ponieważ jest to pierwsze uruchomienie programu, możesz wybrać gdzie %1 będzie przechowywał swoje dane.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Dogecoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 pobierze i będzie przechowywał kopię łańcucha bloków Dogecoin. W wybranym katalogu zostanie zapisanych %2GB danych, a z czasem ta ilość będzie rosła. Portfel będzie przechowywany w tym samym katalogu.</translation>
+        <source>%1 will download and store a copy of the Dogeseedz block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 pobierze i będzie przechowywał kopię łańcucha bloków Dogeseedz. W wybranym katalogu zostanie zapisanych %2GB danych, a z czasem ta ilość będzie rosła. Portfel będzie przechowywany w tym samym katalogu.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -824,19 +824,19 @@
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
-        <translation>Błąd: podany folder danych "%1" nie mógł zostać utworzony.</translation>
+        <translation>Błąd: podany folder danych «%1» nie mógł zostać utworzony.</translation>
     </message>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <source>%n GB of free space available</source>
-        <translation>%n GB dostępnego wolnego miejsca</translation>
+        <translation><numerusform>%n GB dostępnego wolnego miejsca</numerusform><numerusform>%n GB dostępnego wolnego miejsca</numerusform><numerusform>%n GB dostępnego wolnego miejsca</numerusform><numerusform>%n GB dostępnego wolnego miejsca</numerusform></translation>
     </message>
-    <message>
+    <message numerus="yes">
         <source>(of %n GB needed)</source>
-        <translation>(z %n GB potrzebnych)</translation>
+        <translation><numerusform>(z %n GB potrzebnych)</numerusform><numerusform>(z %n GB potrzebnych)</numerusform><numerusform>(z %n GB potrzebnych)</numerusform><numerusform>(z %n GB potrzebnych)</numerusform></translation>
     </message>
 </context>
 <context>
@@ -851,7 +851,7 @@
     </message>
     <message>
         <source>Unknown...</source>
-        <translation>Nieznane...</translation>
+        <translation>Nienznane...</translation>
     </message>
     <message>
         <source>Last block time</source>
@@ -1000,16 +1000,16 @@
         <translation>Wydaj niepotwierdzoną re&amp;sztę</translation>
     </message>
     <message>
-        <source>Automatically open the Dogecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatycznie otwiera port klienta Dogecoin na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
+        <source>Automatically open the Dogeseedz client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatycznie otwiera port klienta Dogeseedz na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapuj port używając &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Dogecoin network through a SOCKS5 proxy.</source>
-        <translation>Połącz się z siecią Dogecoin poprzez proxy SOCKS5.</translation>
+        <source>Connect to the Dogeseedz network through a SOCKS5 proxy.</source>
+        <translation>Połącz się z siecią Dogeseedz poprzez proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1017,7 +1017,7 @@
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
-        <translation>&amp;IP proxy:</translation>
+        <translation>&amp;IP proxy: </translation>
     </message>
     <message>
         <source>&amp;Port:</source>
@@ -1048,8 +1048,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Dogecoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Połącz się z siecią Dogecoin przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
+        <source>Connect to the Dogeseedz network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Połącz się z siecią Dogeseedz przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1097,7 +1097,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Wybierz podział jednostki pokazywany w interfejsie oraz podczas wysyłania monet.</translation>
+        <translation>Wybierz podział jednostki pokazywany w interfejsie  oraz podczas wysyłania monet</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1147,8 +1147,8 @@
         <translation>Formularz</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dogecoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią Dogecoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dogeseedz network after a connection is established, but this process has not completed yet.</source>
+        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią dogeseedz, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1172,7 +1172,7 @@
     </message>
     <message>
         <source>Immature:</source>
-        <translation>Niedojrzały:</translation>
+        <translation>Niedojrzały: </translation>
     </message>
     <message>
         <source>Mined balance that has not yet matured</source>
@@ -1192,7 +1192,7 @@
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
-        <translation>Twoje obecne saldo na podglądanym adresie</translation>
+        <translation>Twoje obecne saldo na podglądanym adresie </translation>
     </message>
     <message>
         <source>Spendable:</source>
@@ -1222,8 +1222,8 @@
         <translation>Błąd żądania płatności</translation>
     </message>
     <message>
-        <source>Cannot start dogecoin: click-to-pay handler</source>
-        <translation>Nie można uruchomić protokołu Dogecoin: kliknij-by-zapłacić</translation>
+        <source>Cannot start dogeseedz: click-to-pay handler</source>
+        <translation>Nie można uruchomić protokołu dogeseedz: kliknij-by-zapłacić</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1292,8 +1292,8 @@
         <translation>Kwota</translation>
     </message>
     <message>
-        <source>Enter a Dogecoin address (e.g. %1)</source>
-        <translation>Wprowadź adres Dogecoinowy (np. %1)</translation>
+        <source>Enter a Dogeseedz address (e.g. %1)</source>
+        <translation>Wprowadź adres dogeseedzowy (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1386,7 +1386,7 @@
     </message>
     <message>
         <source>Using BerkeleyDB version</source>
-        <translation>Używana wersja BerkeleyDB</translation>
+        <translation>Używana wersja BerkeleyDB </translation>
     </message>
     <message>
         <source>Datadir</source>
@@ -1602,11 +1602,11 @@
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Użyj strzałek do przewijania historii i &lt;b&gt;Ctrl-L&lt;/b&gt; aby wyczyścić ekran.</translation>
+        <translation>Użyj strzałek do przewijania historii i &lt;b&gt;Ctrl-L&lt;/b&gt; aby wyczyścić ekran</translation>
     </message>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>Wpisz &lt;b&gt;help&lt;/b&gt; aby uzyskać listę dostępnych komend.</translation>
+        <translation>Wpisz &lt;b&gt;help&lt;/b&gt; aby uzyskać listę dostępnych komend</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -1680,8 +1680,8 @@
         <translation>U&amp;żyj ponownie istniejącego adresu odbiorczego (niepolecane)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Dogecoin network.</source>
-        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci Dogecoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Dogeseedz network.</source>
+        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci Dogeseedz.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1693,7 +1693,7 @@
     </message>
     <message>
         <source>An optional amount to request. Leave this empty or zero to not request a specific amount.</source>
-        <translation>Opcjonalna kwota żądania. Zostaw puste lub zero by nie zażądać konkretnej kwoty.</translation>
+        <translation>Opcjonalna kwota by zażądać. Zostaw puste lub zero by nie zażądać konkretnej kwoty.</translation>
     </message>
     <message>
         <source>Clear all fields of the form.</source>
@@ -1866,7 +1866,7 @@
     </message>
     <message>
         <source>If this is activated, but the change address is empty or invalid, change will be sent to a newly generated address.</source>
-        <translation>Kiedy ta opcja jest wybrana, to jeżeli adres reszty jest pusty lub nieprawidłowy, to reszta będzie wysyłana na nowo wygenerowany adres.</translation>
+        <translation>Kiedy ta opcja jest wybrana, to jeżeli adres reszty jest pusty lub nieprawidłowy, to reszta będzie wysyłana na nowo wygenerowany adres, </translation>
     </message>
     <message>
         <source>Custom change address</source>
@@ -1901,8 +1901,8 @@
         <translation>razem przynajmniej</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dogecoin transactions than the network can process.</source>
-        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje Dogecoina niż sieć może przetworzyć.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dogeseedz transactions than the network can process.</source>
+        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje dogeseedza niż sieć może przetworzyć.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2017,8 +2017,8 @@
         <translation>Zapłać tylko wymaganą opłatę w wysokości %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Dogecoin address</source>
-        <translation>Ostrzeżenie: nieprawidłowy adres Dogecoin</translation>
+        <source>Warning: Invalid Dogeseedz address</source>
+        <translation>Ostrzeżenie: nieprawidłowy adres Dogeseedz</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2052,8 +2052,8 @@
         <translation>To jest standardowa płatność</translation>
     </message>
     <message>
-        <source>The Dogecoin address to send the payment to</source>
-        <translation>Adres Dogecoin, na który wysłać płatność</translation>
+        <source>The Dogeseedz address to send the payment to</source>
+        <translation>Adres Dogeseedz gdzie wysłać płatność</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2072,8 +2072,8 @@
         <translation>Usuń ten wpis</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less dogecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Opłata zostanie odjęta od kwoty wysyłanej. Odbiorca otrzyma mniej niż Dogecoinów wpisanych w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less dogeseedz than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż dogeseedz wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2096,8 +2096,8 @@
         <translation>Wprowadź etykietę dla tego adresu by dodać go do listy użytych adresów</translation>
     </message>
     <message>
-        <source>A message that was attached to the dogecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
-        <translation>Wiadomość, która została dołączona do URI Dogecoina, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Dogecoin.</translation>
+        <source>A message that was attached to the dogeseedz: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogeseedz network.</source>
+        <translation>Wiadomość, która została dołączona do URI dogeseedz:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Dogeseedz.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2137,12 +2137,12 @@
         <translation>Podpi&amp;sz Wiadomość</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive dogecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive dogeseedz sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Możesz podpisywać wiadomości swoimi adresami aby udowodnić, że jesteś ich właścicielem. Uważaj, aby nie podpisywać niczego co wzbudza Twoje podejrzenia, ponieważ ktoś może stosować phishing próbując nakłonić Cię do ich podpisania. Akceptuj i podpisuj tylko w pełni zrozumiałe komunikaty i wiadomości.</translation>
     </message>
     <message>
-        <source>The Dogecoin address to sign the message with</source>
-        <translation>Adres Dogecoin, za pomocą którego podpisać wiadomość</translation>
+        <source>The Dogeseedz address to sign the message with</source>
+        <translation>Adres Dogeseedz, za pomocą którego podpisać wiadomość</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2173,7 +2173,7 @@
         <translation>Kopiuje aktualny podpis do schowka systemowego</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Dogecoin address</source>
+        <source>Sign the message to prove you own this Dogeseedz address</source>
         <translation>Podpisz wiadomość aby dowieść, że ten adres jest twój</translation>
     </message>
     <message>
@@ -2194,16 +2194,16 @@
     </message>
     <message>
         <source>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</source>
-        <translation>Wpisz adres, wiadomość oraz sygnaturę (podpis) odbiorcy (upewnij się, że dokładnie skopiujesz wszystkie zakończenia linii, spacje, tabulacje itp.). Uważaj by nie dodać więcej do podpisu niż do samej podpisywanej wiadomości by uniknąć ataku man-in-the-middle. 
-Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadawca posiada klucz do adresu, natomiast nie potwierdza to, że poprawne wysłanie jakiejkolwiek transakcji!</translation>
+        <translation>Wpisz adres, wiadomość oraz sygnaturę (podpis) odbiorcy (upewnij się, że dokładnie skopiujesz wszystkie zakończenia linii, spacje, tabulacje itp.).  Uważaj by nie dodać więcej do podpisu niż do samej podpisywanej wiadomości by uniknąć ataku man-in-the-middle. 
+Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadawca posiada klucz do adresu, natomiast nie potwierdza to, że poprawne wysłanie jakiejkolwiek transakcji! </translation>
     </message>
     <message>
-        <source>The Dogecoin address the message was signed with</source>
-        <translation>Adres Dogecoin, którym została podpisana wiadomość</translation>
+        <source>The Dogeseedz address the message was signed with</source>
+        <translation>Adres Dogeseedz, którym została podpisana wiadomość</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Dogecoin address</source>
-        <translation>Zweryfikuj wiadomość, aby upewnić się, że została podpisana odpowiednim adresem Dogecoin.</translation>
+        <source>Verify the message to ensure it was signed with the specified Dogeseedz address</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem Dogeseedz.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2429,7 +2429,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>dogeseedz-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcje:</translation>
@@ -2460,7 +2460,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
-        <translation>Przycinanie: ostatnia synchronizacja portfela wykracza poza przycięte dane. Musisz użyć -reindex (pobrać cały ciąg bloków ponownie w przypadku przyciętego węzła)</translation>
+        <translation>Prune: ostatnia synchronizacja portfela jest za danymi. Muszisz -reindexować (pobrać cały ciąg bloków ponownie w przypadku przyciętego węzła)</translation>
     </message>
     <message>
         <source>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
@@ -2487,8 +2487,8 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Uruchomienie serwera HTTP nie powiodło się. Zobacz dziennik debugowania, aby uzyskać więcej szczegółów.</translation>
     </message>
     <message>
-        <source>Dogecoin Core</source>
-        <translation>Rdzeń Dogecoina</translation>
+        <source>Dogeseedz Core</source>
+        <translation>Rdzeń Dogeseedza</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -2500,7 +2500,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Accept relayed transactions received from whitelisted peers even when not relaying transactions (default: %d)</source>
-        <translation>Akceptuj przekazywane transakcje otrzymane od użytkowników z białej listy nawet gdy przekazywanie transakcji nie jest włączone (domyślnie: %d)</translation>
+        <translation>Accept relayed transactions received from whitelisted peers even when not relaying transactions (default: %d)</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -2672,7 +2672,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Only connect to nodes in network &lt;net&gt; (ipv4, ipv6 or onion)</source>
-        <translation>Łącz z węzłami tylko w sieci &lt;net&gt; (IPv4, IPv6 lub onion)</translation>
+        <translation>Łącz z węzłami tylko w sieci &lt;net&gt; (ipv4, piv6 lub onion)</translation>
     </message>
     <message>
         <source>Print this help message and exit</source>
@@ -2932,7 +2932,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Unable to bind to %s on this computer (bind returned error %s)</source>
-        <translation>Nie można przywiązać do %s na tym komputerze (przywiązanie zwróciło błąd %s)</translation>
+        <translation>Nie można przywiązać do %s na tym komputerze (bind zwrócił błąd %s)</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format on startup</source>
@@ -3008,7 +3008,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
-        <translation>Całkowita długość łańcucha wersji (%i) przekracza maksymalną dopuszczalną długość (%i). Zmniejsz ilość lub rozmiar parametru uacomments.</translation>
+        <translation>Całkowita długość łańcucha wersji (%i) przekracza maksymalną dopuszczalną długość (%i). Zmniejsz ilość lub rozmiar parametru uacomment.</translation>
     </message>
     <message>
         <source>Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = no limit (default: %d)</source>
@@ -3040,7 +3040,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Always query for peer addresses via DNS lookup (default: %u)</source>
-        <translation>Zawsze wypytuj o adresy węzłów poprzez podejrzenie w DNS (domyślnie: %u)</translation>
+        <translation>Zawsze wypytuj o adresy węzłów poprzez podejrzenie DNS (domyślnie: %u)</translation>
     </message>
     <message>
         <source>How many blocks to check at startup (default: %u, 0 = all)</source>

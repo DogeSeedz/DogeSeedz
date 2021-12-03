@@ -11,7 +11,6 @@
 #include "txmempool.h"
 #include "util.h"
 #include "validation.h"
-#include "dogecoin-fees.h"
 
 int static generateMTRandom(unsigned int s, int range)
 {
@@ -30,7 +29,7 @@ bool AllowDigishieldMinDifficultyForBlock(const CBlockIndex* pindexLast, const C
         return false;
 
     // check if the chain allows minimum difficulty blocks on recalc blocks
-    if (pindexLast->nHeight < 157500)
+    if (pindexLast->nHeight < 1)
     // if (!params.fPowAllowDigishieldMinDifficultyBlocks)
         return false;
 
@@ -54,10 +53,10 @@ unsigned int CalculateDogecoinNextWorkRequired(const CBlockIndex* pindexLast, in
 
         nMinTimespan = retargetTimespan - (retargetTimespan / 4);
         nMaxTimespan = retargetTimespan + (retargetTimespan / 2);
-    } else if (nHeight > 10000) {
+    } else if (nHeight > 2) {
         nMinTimespan = retargetTimespan / 4;
         nMaxTimespan = retargetTimespan * 4;
-    } else if (nHeight > 5000) {
+    } else if (nHeight > 1) {
         nMinTimespan = retargetTimespan / 8;
         nMaxTimespan = retargetTimespan * 4;
     } else {
@@ -126,7 +125,7 @@ bool CheckAuxPowProofOfWork(const CBlockHeader& block, const Consensus::Params& 
 CAmount GetDogecoinBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, uint256 prevHash)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-
+/*
     if (!consensusParams.fSimplifiedRewards)
     {
         // Old-style rewards derived from the previous block hash
@@ -141,10 +140,114 @@ CAmount GetDogecoinBlockSubsidy(int nHeight, const Consensus::Params& consensusP
     } else if (nHeight < (6 * consensusParams.nSubsidyHalvingInterval)) {
         // New-style constant rewards for each halving interval
         return (500000 * COIN) >> halvings;
-    } else {
-        // Constant inflation
-        return 10000 * COIN;
+    } 
+*/
+
+
+    
+
+    if (nHeight<2) {
+        return 1000000000 * COIN;
     }
+
+    else if (nHeight<10) {
+       return 10000000 * COIN;
+    }
+    
+    else if (nHeight<100) {
+        return 10000 * COIN;
+    }    
+      
+    else if (nHeight<2880) {
+        return 100 * COIN;
+    }  
+    
+    else if (nHeight<5760) {
+        return 500 * COIN;
+    }  
+    
+    else if (nHeight<11520) {
+        return 1000 * COIN;
+    }
+    
+    else if (nHeight<23040) {
+        return 1500 * COIN;
+    }       
+    
+    else if (nHeight<46080) {
+        return 5000 * COIN;
+    }    
+    
+    else if (nHeight<50000) {
+        return 7500 * COIN;
+    }     
+    
+    else if (nHeight<100000) {
+        return 9000 * COIN;
+    }    
+    
+    else if (nHeight<200000) {
+        return 10000 * COIN;
+    }  
+    
+    else if (nHeight<300000) {
+        return 15000 * COIN;
+    }   
+    
+    else if (nHeight<400000) {
+        return 20000 * COIN;
+    }  
+    
+    else if (nHeight<500000) {
+        return 25000 * COIN;
+    }
+    else if (nHeight<1000000) {
+        return 10000 * COIN;
+    }                  
+    else {
+        // Constant inflation
+        return 100 * COIN;
+    }
+
 }
 
+CAmount GetDogecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)
+{
+    {
+        LOCK(mempool.cs);
+        uint256 hash = tx.GetHash();
+        double dPriorityDelta = 0;
+        CAmount nFeeDelta = 0;
+        mempool.ApplyDeltas(hash, dPriorityDelta, nFeeDelta);
+        if (dPriorityDelta > 0 || nFeeDelta > 0)
+            return 0;
+    }
 
+    CAmount nMinFee = ::minRelayTxFee.GetFee(nBytes);
+    nMinFee += GetDogecoinDustFee(tx.vout, ::minRelayTxFee);
+
+    if (fAllowFree)
+    {
+        // There is a free transaction area in blocks created by most miners,
+        // * If we are relaying we allow transactions up to DEFAULT_BLOCK_PRIORITY_SIZE - 1000
+        //   to be considered to fall into this category. We don't want to encourage sending
+        //   multiple transactions instead of one big transaction to avoid fees.
+        if (nBytes < (DEFAULT_BLOCK_PRIORITY_SIZE - 1000))
+            nMinFee = 0;
+    }
+
+    if (!MoneyRange(nMinFee))
+        nMinFee = MAX_MONEY;
+    return nMinFee;
+}
+
+CAmount GetDogecoinDustFee(const std::vector<CTxOut> &vout, CFeeRate &baseFeeRate) {
+    CAmount nFee = 0;
+
+    // To limit dust spam, add base fee for each output less than a COIN
+    BOOST_FOREACH(const CTxOut& txout, vout)
+        if (txout.IsDust(::minRelayTxFee))
+            nFee += baseFeeRate.GetFeePerK();
+
+    return nFee;
+}

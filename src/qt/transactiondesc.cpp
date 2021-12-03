@@ -192,9 +192,9 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
                             strHTML += GUIUtil::HtmlEscape(wallet->mapAddressBook[address].name) + " ";
                         strHTML += GUIUtil::HtmlEscape(CBitcoinAddress(address).ToString());
                         if(toSelf == ISMINE_SPENDABLE)
-                            strHTML += " (" + tr("own address") + ")";
+                            strHTML += " (own address)";
                         else if(toSelf & ISMINE_WATCH_ONLY)
-                            strHTML += " (" + tr("watch-only") + ")";
+                            strHTML += " (watch-only)";
                         strHTML += "<br>";
                     }
                 }
