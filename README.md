@@ -5,7 +5,7 @@
 DogeSeedz is a cryptocurrency like Bitcoin, although it does not use SHA256 as
 its proof of work (POW). Taking development cues from Tenebrix and Litecoin,
 DogeSeedz currently employs a simplified variant of scrypt.
-- **Website:** [DogeSeedz.net.](https://DogeSeedz.net)
+- **Website:** [dogeseedz.com](https://dogeseedz.net)
 
 ## License – Much license ⚖️
 DogeSeedz Core is released under the terms of the MIT license. See
