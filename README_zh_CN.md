@@ -1,13 +1,13 @@
-# 狗狗币核心 （Dogecoin Core） [DOGE, Ð]
+# 狗狗币核心 （Dogeseedz Core） [DOGE, Ð]
 
-![Dogecoin](https://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
+![Dogecoin](https://dogeseedz.com/dogeseedz.png)
 
 [![Build Status](https://travis-ci.com/dogecoin/dogecoin.svg?branch=master)](https://travis-ci.com/dogecoin/dogecoin)
 
 选择文档语言: [英文](../README.md) | 简体中文 | [其他语言...](./README_zh_CN.md)
 
 尽管狗狗币不使用SHA256作为它的工作量证明（POW），狗狗币也是一款类似Bitcoin的加密货币。受到Tenebrix和Litecoin的影响，狗狗币目前采用一种更简洁的加密方式。
-- **网址:** [dogecoin.com.](https://dogecoin.com)
+- **网址:** [dogeseedz.com.](https://dogeseedz.com)
 
 ## 证书 – 炫酷的证书 ⚖️
 狗狗币在MIT liscence的条款下发行。详情请参见

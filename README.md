@@ -1,14 +1,14 @@
-# Dogegold Core [DOGEG, ÐG]
+# DogeSeedz Core [DOGESEEDZ, ÐGSEEDZ]
 
-![Dogegold](https://dogegold.net/wallet_bgcoin.png)
+![DogeSeedz](https://dogeseedz.com/dogeseedz.png)
 
-Dogegold is a cryptocurrency like Bitcoin, although it does not use SHA256 as
+DogeSeedz is a cryptocurrency like Bitcoin, although it does not use SHA256 as
 its proof of work (POW). Taking development cues from Tenebrix and Litecoin,
-Dogegold currently employs a simplified variant of scrypt.
-- **Website:** [Dogegold.net.](https://Dogegold.net)
+DogeSeedz currently employs a simplified variant of scrypt.
+- **Website:** [DogeSeedz.net.](https://DogeSeedz.net)
 
 ## License – Much license ⚖️
-Dogegold Core is released under the terms of the MIT license. See
+DogeSeedz Core is released under the terms of the MIT license. See
 [COPYING](COPYING) for more information or see
 [opensource.org](https://opensource.org/licenses/MIT)
 
@@ -50,7 +50,8 @@ not straightforward.
 
 ## Very Much Frequently Asked Questions ❓
 
-### How much dogegold can exist? – So many puppies! 🐕
+### How many DogeSeedz can exist?
+
 Around block 1,000,000 there will be approximately 9,000,000,000 coins.
 Each subsequent block will grant 100 coins to encourage miners to continue to
 secure the network and make up for lost wallets on hard drives/phones/lost
@@ -59,33 +60,33 @@ encryption passwords/etc.
 
 ### Such mining information ⛏
 
-Dogegold uses a simplified variant of the scrypt key derivation function as its
+DogeSeedz uses a simplified variant of the scrypt key derivation function as its
 proof of work with a target time of 30 seconds per block and difficulty
 readjustment after every block.  
 
 
 **The current block reward schedule:**
 
-Block 1 : 1000000000 Dogegold
-Block 2 : 10000000 Dogegold
-Block 10 : 10000 Dogegold
-Block 100 : 100 Dogegold
-Block 2880 : 500 Dogegold
-Block 5760 : 1000 Dogegold
-Block 11520 : 1500 Dogegold
-Block 23040 : 5000 Dogegold
-Block 46080 : 7500 Dogegold
-Block 50000 : 9000 Dogegold
-Block 100000 : 10000 Dogegold
-Block 200000 : 15000 Dogegold
-Block 300000 : 20000 Dogegold
-Block 400000 : 25000 Dogegold
-Block 500000 : 10000 Dogegold
-Block 1000000 : 100 Dogegold
+Block 1 : 1000000000 DogeSeedz
+Block 2 : 10000000 DogeSeedz
+Block 10 : 10000 DogeSeedz
+Block 100 : 100 DogeSeedz
+Block 2880 : 500 DogeSeedz
+Block 5760 : 1000 DogeSeedz
+Block 11520 : 1500 DogeSeedz
+Block 23040 : 5000 DogeSeedz
+Block 46080 : 7500 DogeSeedz
+Block 50000 : 9000 DogeSeedz
+Block 100000 : 10000 DogeSeedz
+Block 200000 : 15000 DogeSeedz
+Block 300000 : 20000 DogeSeedz
+Block 400000 : 25000 DogeSeedz
+Block 500000 : 10000 DogeSeedz
+Block 1000000 : 100 DogeSeedz
 
-### Wow plz make Dogegoldd/Dogegold-cli/Dogegold-qt
+### Wow plz make DogeSeedzd/DogeSeedz-cli/DogeSeedz-qt
 
-  The following are developer notes on how to build Dogegold on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+  The following are developer notes on how to build DogeSeedz on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
   - [OSX Build Notes](doc/build-osx.md)
   - [Unix Build Notes](doc/build-unix.md)
@@ -116,7 +117,7 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the `-testnet` option to run with "play Dogegolds" on the test network, if you
+Run with the `-testnet` option to run with "play DogeSeedzs" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 If you are testing something that can run on one machine, run with the `-regtest` option.
@@ -125,7 +126,7 @@ that run in `-regtest` mode.
 
 **DEBUG_LOCKORDER**
 
-Dogegold Core is a multithreaded application, and deadlocks or other multithreading bugs
+DogeSeedz Core is a multithreaded application, and deadlocks or other multithreading bugs
 can be very difficult to track down. Compiling with `-DDEBUG_LOCKORDER` (`configure
 CXXFLAGS="-DDEBUG_LOCKORDER -g"`) inserts run-time checks to keep track of which locks
 are held, and adds warnings to the debug.log file if inconsistencies are detected.
